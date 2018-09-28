@@ -15,6 +15,7 @@ public class CrossHair : MonoBehaviour
 	}
 	void Update() 
     {
-        _transform.forward = cameraTransform.forward;
+        //_transform.forward = cameraTransform.forward;
+		_transform.Rotate(Vector3.forward * 30.0f * Time.deltaTime);
     }
 }
