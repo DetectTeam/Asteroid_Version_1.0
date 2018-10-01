@@ -6,7 +6,22 @@ public class CrossHair : MonoBehaviour
 {
 
 	private Transform _transform;
+	private float speed = 2.0f;
 	[SerializeField] private Transform cameraTransform;
+
+
+	private void OnEnable()
+	{
+		
+		      iTween.ScaleTo ( gameObject, iTween.Hash (
+				  
+				  "scale", transform.localScale * 0.2f, 
+				  "speed", speed, 
+				  "easetype", "linear" 
+				  
+				) );
+	
+	}
 
 	private void Start()
 	{
@@ -15,7 +30,7 @@ public class CrossHair : MonoBehaviour
 	}
 	void Update() 
     {
-        _transform.forward = cameraTransform.forward;
+        //_transform.forward = cameraTransform.forward;
 		_transform.Rotate(Vector3.forward * 30.0f * Time.deltaTime);
     }
 }
