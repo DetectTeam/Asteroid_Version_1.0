@@ -9,18 +9,28 @@ public class CrossHair : MonoBehaviour
 	private float speed = 2.0f;
 	[SerializeField] private Transform cameraTransform;
 
+	private Vector3 tmpLocalScale; 
+
+
+	private void Awake()
+	{
+		tmpLocalScale = transform.localScale;
+	}
 
 	private void OnEnable()
 	{
-		
 		      iTween.ScaleTo ( gameObject, iTween.Hash (
 				  
-				  "scale", transform.localScale * 0.2f, 
+				  "scale", transform.localScale * 0.5f, 
 				  "speed", speed, 
 				  "easetype", "linear" 
 				  
 				) );
-	
+	}
+
+	private void OnDisable()
+	{
+		transform.localScale = tmpLocalScale;
 	}
 
 	private void Start()

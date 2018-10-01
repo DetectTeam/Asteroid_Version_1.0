@@ -29,7 +29,7 @@ public class Asteroid : MonoBehaviour
 
 	 private void OnMouseDown()
      {
-         print (name); 
+        
 		 ToggleCrosshair();
      }
 
@@ -66,8 +66,12 @@ public class Asteroid : MonoBehaviour
 
 	 private IEnumerator ExplodeAsteroid()
 	 {
-		 yield return null;
 		 Debug.Log( "Destroying Asteroid." );
+		 Messenger<Transform>.Broadcast( "Explosion", _transform );
+
+		 yield return null;
+		 
+		 transform.parent.gameObject.SetActive( false );
 	 }
 	
 }

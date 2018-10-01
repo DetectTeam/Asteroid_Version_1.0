@@ -29,7 +29,9 @@ public class ExplosionHandler : MonoBehaviour
 
 	private void Explosion( Transform destination )
 	{
-		particleList[0].transform.position = destination.position;
-		particleList[0].gameObject.SetActive( true );
+		//particleList[0].transform.position = destination.position;
+		//particleList[0].gameObject.SetActive( true );
+		var clone = Instantiate( particleList[1], destination.position, destination.rotation );
+		clone.SetActive( true );
 	}
 }

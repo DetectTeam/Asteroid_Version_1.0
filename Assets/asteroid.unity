@@ -464,7 +464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800008, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
       propertyPath: playOnAwake
@@ -496,7 +496,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
       propertyPath: OnlyDeactivate
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
@@ -932,7 +936,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1588170736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1588170734}
+        m_MethodName: Fire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1588170736
@@ -1072,7 +1087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800010, guid: 4575df893a6e3f64a8283dee38413a34, type: 2}
       propertyPath: playOnAwake
@@ -1100,7 +1115,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 4575df893a6e3f64a8283dee38413a34, type: 2}
       propertyPath: OnlyDeactivate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4575df893a6e3f64a8283dee38413a34, type: 2}
